@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Матрица судьбы</title>
+    <link rel="stylesheet" href="sass/main.css">
+    <script src="js/main.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="birthdate">
+        <div class="birthdate__container">
+            <div class="birthdate__form">
+                <div class="birthdate__form__title">
+                    Введите дату рождения
+                </div>
+                <input type="text" id="birthdate">
+            </div>
+            <div class="birthdate__btn">
+                <button class="birthdate__btn__inner">Рассчитать</button>
+            </div>
+        </div>
+        <div class="birthdate__age">
+            <div class="birthdate__age__title" id="ageDisplay">
+                Возраст: Х лет
+            </div>
+            <div class="birthdate__age__title" id="ageDisplay">
+                Энергия 1: ХХ
+            </div>
+            <div class="birthdate__age__title" id="ageDisplay">
+                Энергия 2: ХХ
+            </div>
+            <div class="birthdate__age__title" id="ageDisplay">
+                Энергия 3: ХХ
+            </div>
+        </div>
+    </div>
+
+
+
+    <svg id="svg_x" version="1.1" viewBox="12 10 230 230" xmlns="http://www.w3.org/2000/svg"
+        xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <metadata>
+            <rdf:RDF>
+                <cc:Work rdf:about="">
+                    <dc:format>image/svg+xml</dc:format>
+                    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                    <dc:title />
+                </cc:Work>
+            </rdf:RDF>
+        </metadata>
+        <g>
+            <image href="img/man_background.svg" x="26" y="32" width="85%" height="85%" opacity="0.5"></image>
+        </g>
+        <g width="200" height="200">
+            <path d="
+            M 122,29
+            A 14,14 0 0 1 132,29
+            L 193,54
+            A 14,14 0 0 1 201,63
+            L  225.5,123 
+            A 14,14 0 0 1 225,132                
+            L 200,193 
+            A 14,14 0 0 1 193,200              
+            L 133,225 
+            A 14,14 0 0 1 122,225                
+            L  59,199   
+            A 14,14 0 0 1 53.5,192              
+            L   28.5,130  
+            A 10,10 0 0 1 28.5,124                 
+            L   54.5,60   
+            A 11,11 0 0 1 62,54           
+            Z" style="fill:none; stroke:#7F4B53; stroke-width:0.3;" />
+
+        </g>
+        <g class="layer1" stroke="#7F4B53" stroke-width=".24">
+            <rect x="63.360390" y="63.360390" width="127" height="127" fill="none" opacity=".999" />
+            <line x1="127" y1="37" x2="127" y2="217" />
+            <line x1="37" y1="127" x2="217" y2="127" />
+            <line x1="37" y1="127" x2="127" y2="37" />
+            <line x1="37" y1="127" x2="127" y2="217" />
+            <line x1="127" y1="37" x2="217" y2="127" />
+            <line x1="127" y1="217" x2="217" y2="127" />
+            <line x1="127" y1="190" x2="190" y2="127"
+                style="stroke:#7F4B53;stroke-width:0.24;stroke-miterlimit:4;stroke-dasharray:0.96000001,1.92000001;stroke-dashoffset:0" />
+            <line x1="127" y1="203" x2="203" y2="127" />
+            <line x1="63.360390" y1="63.360390" x2="190.639610" y2="190.639610"
+                style="stroke:#7F4B53;stroke-width:0.24;stroke-miterlimit:4;stroke-dasharray:0.96000001,1.92000001;stroke-dashoffset:0" />
+            <line x1="63.360390" y1="190.639610" x2="190.639610" y2="63.360390"
+                style="stroke:#7F4B53;stroke-width:0.24;stroke-miterlimit:4;stroke-dasharray:0.96000001,1.92000001;stroke-dashoffset:0" />
+            <text x="-42.400311" y="177.58769" transform="rotate(-45)"
+                style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#7F4B53;fill-opacity:1;stroke:none;stroke-width:0.264583">
+                род матери </text> <text x="198.83521" y="-1.8544561" transform="rotate(45)"
+                style="font-style:normal;font-weight:normal;font-size:3.52777px;line-height:1.25;font-family:sans-serif;fill:#7F4B53;fill-opacity:1;stroke:none;stroke-width:0.264583">
+                род отца </text>
+        </g>
+        <g class="layer2" stroke-width=".45">
+
+            <circle id="circle_AE_inner" cx="54" cy="127" r="6" class="circle_blue" />
+            <text id="circle_AE_inner_text" x="54" y="129" class="font_small"></text>
+
+            <circle id="circle_AE" cx="68" cy="127" r="6" class="circle_blue_light" />
+            <text id="circle_AE_text" x="68" y="129" class="font_small"></text>
+
+            <circle id="circle_FE_inner" cx="75" cy="75" r="6" class="circle_fill_maincolor" />
+            <text id="circle_FE_inner_text" x="75" y="77" class="font_small"></text>
+
+            <circle id="circle_FE" cx="85" cy="85" r="6" class="circle_fill_maincolor" />
+            <text id="circle_FE_text" x="85" y="87" class="font_small"></text>
+
+            <circle id="circle_BE_inner" cx="127" cy="54" r="6" class="circle_blue" />
+            <text id="circle_BE_inner_text" x="127" y="56" class="font_small"></text>
+
+            <circle id="circle_BE" cx="127" cy="68" r="6" class="circle_blue_light" />
+            <text id="circle_BE_text" x="127" y="70" class="font_small"></text>
+
+            <circle id="circle_GE_inner" cx="178" cy="75" r="6" class="circle_fill_maincolor" />
+            <text id="circle_GE_inner_text" x="178" y="77" class="font_small"></text>
+
+            <circle id="circle_GE" cx="168" cy="85" r="6" class="circle_fill_maincolor" />
+            <text id="circle_GE_text" x="168" y="87" class="font_small"></text>
+
+            <circle id="circle_CE_inner" cx="200" cy="127" r="6" class="circle_fill_maincolor" />
+            <text id="circle_CE_inner_text" x="200" y="129" class="font_small"></text>
+
+            <circle id="circle_CE" cx="186" cy="127" r="6" class="circle_orange" />
+            <text id="circle_CE_text" x="186" y="129" class="font_small"></text>
+
+            <circle id="circle_HE_inner" cx="178" cy="178" r="6" class="circle_fill_maincolor" />
+            <text id="circle_HE_inner_text" x="178" y="180" class="font_small"></text>
+
+            <circle id="circle_HE" cx="168" cy="168" r="6" class="circle_fill_maincolor" />
+            <text id="circle_HE_text" x="168" y="170" class="font_small"></text>
+
+            <circle id="circle_DE_inner" cx="127" cy="200" r="6" class="circle_fill_maincolor" />
+            <text id="circle_DE_inner_text" x="127" y="202" class="font_small"></text>
+
+            <circle id="circle_DE" cx="127" cy="186" r="6" class="circle_orange" />
+            <text id="circle_DE_text" x="127" y="188" class="font_small"></text>
+
+            <circle id="circle_IE_inner" cx="76" cy="178" r="6" class="circle_fill_maincolor" />
+            <text id="circle_IE_inner_text" x="76" y="180" class="font_small"></text>
+
+            <circle id="circle_IE" cx="86" cy="168" r="6" class="circle_fill_maincolor" />
+            <text id="circle_IE_text" x="86" y="170" class="font_small"></text>
+
+            <circle id="circle_M" cx="158" cy="158" r="4" class="circle_fill_maincolor" />
+            <text id="circle_M_text" x="157.8" y="159.5" class="font_extra_small"></text>
+
+            <circle id="circle_O" cx="172" cy="145" r="4" class="circle_fill_maincolor" />
+            <text id="circle_O_text" x="172" y="146.5" class="font_extra_small"></text>
+
+            <circle id="circle_N" cx="144" cy="172" r="4" class="circle_fill_maincolor" />
+            <text id="circle_N_text" x="144" y="173.5" class="font_extra_small"></text>
+
+            <circle id="circle_P" cx="97" cy="127" r="4" class="circle_green" />
+            <text id="circle_P_text" x="97" y="128.7" class="font_extra_small"></text>
+
+            <circle id="circle_R" cx="127" cy="95" r="4" class="circle_green" />
+            <text id="circle_R_text" x="127" y="96.5" class="font_extra_small"></text>
+        </g>
+        <g class="layer3">
+
+            <circle class="circle_A circle_purple" cx="37" cy="127" r="9.34" stroke-width="0.45" />
+            <text id="circle_A_text" x="36.8" y="131.5" class="font_big"></text>
+
+            <circle class="circle_B circle_purple" cx="127" cy="37" r="9.34" stroke-width="0.45" />
+            <text id="circle_B_text" x="127" y="41" class="font_big"></text>
+
+            <circle class="circle_C circle_red" cx="217" cy="127" r="9.34" stroke-width="0.45" />
+            <text id="circle_C_text" x="217" y="131.5" class="font_big"></text>
+
+            <circle class="circle_D circle_red" cx="127" cy="217" r="9.34" stroke-width="0.45" />
+            <text id="circle_D_text" x="127" y="221.5" class="font_big"></text>
+
+            <circle class="circle_E circle_yellow" cx="127" cy="127" r="10" stroke-width="0.45" />
+            <text id="circle_E_text" x="127" y="131.2" class="font_big"></text>
+
+            <circle class="circle_F fill_stroke_maincolor" cx="63.360390" cy="63.360390" r="9.34" stroke-width="0.45" />
+            <text id="circle_F_text" x="63.3" y="67.5" class="font_big"></text>
+
+            <circle class="circle_G fill_stroke_maincolor" cx="190.639610" cy="63.360390" r="9.34"
+                stroke-width="0.45" />
+            <text id="circle_G_text" x="190.7" y="67.5" class="font_big"></text>
+
+            <circle class="circle_H fill_stroke_maincolor" cx="190.639610" cy="190.639610" r="9.34"
+                stroke-width="0.45" />
+            <text id="circle_H_text" x="190.3" y="195" class="font_big"></text>
+
+            <circle class="circle_I fill_stroke_maincolor" cx="63.360390" cy="190.639610" r="9.34"
+                stroke-width="0.45" />
+            <text id="circle_I_text" x="63" y="195" class="font_big"></text>
+        </g>
+        <g id="textos"> </g>
+        <g class="layer4">
+            <circle class="circle_2 circle_fill_maincolor" cx="32.2" cy="115" r="0.7" />
+            <circle class="circle_3 circle_fill_maincolor" cx="35.2" cy="107.5" r="0.7" />
+            <circle class="circle_4 circle_fill_maincolor" cx="38.3" cy="100" r="0.7" />
+            <circle class="circle_5 circle_fill_maincolor" cx="41.3" cy="92.5" r="0.7" />
+            <circle class="circle_6 circle_fill_maincolor" cx="44.3" cy="85" r="0.7" />
+            <circle class="circle_7 circle_fill_maincolor" cx="47.4" cy="77.5" r="0.7" />
+            <circle class="circle_8 circle_fill_maincolor" cx="50" cy="71" r="0.7" />
+            <text id="circle_2_text" x="29" y="114" class="font_years"></text>
+            <text id="circle_3_text" x="31" y="107" class="font_years"></text>
+            <text id="circle_4_text" x="34.5" y="100" class="font_years"></text>
+            <text id="circle_5_text" x="37" y="92" class="font_years"></text>
+            <text id="circle_6_text" x="40" y="85" class="font_years"></text>
+            <text id="circle_7_text" x="43.5" y="77.5" class="font_years"></text>
+            <text id="circle_8_text" x="46.5" y="71" class="font_years"></text>
+
+            <circle class="circle_12 circle_fill_maincolor" cx="70" cy="50.7" r="0.7"></circle>
+            <circle class="circle_13 circle_fill_maincolor" cx="77.3" cy="47.7" r="0.7"></circle>
+            <circle class="circle_14 circle_fill_maincolor" cx="84.8" cy="44.5" r="0.7"></circle>
+            <circle class="circle_15 circle_fill_maincolor" cx="92.5" cy="41.3" r="0.7"></circle>
+            <circle class="circle_16 circle_fill_maincolor" cx="100.4" cy="38" r="0.7"></circle>
+            <circle class="circle_17 circle_fill_maincolor" cx="108.5" cy="34.7" r="0.7"></circle>
+            <circle class="circle_18 circle_fill_maincolor" cx="116" cy="31.5" r="0.7"></circle>
+            <text id="circle_12_text" x="67" y="49" class="font_years"></text>
+            <text id="circle_13_text" x="75" y="46" class="font_years"></text>
+            <text id="circle_14_text" x="83" y="43" class="font_years"></text>
+            <text id="circle_15_text" x="91" y="39.5" class="font_years"></text>
+            <text id="circle_16_text" x="98" y="36" class="font_years"></text>
+            <text id="circle_17_text" x="106" y="33" class="font_years"></text>
+            <text id="circle_18_text" x="114" y="30" class="font_years"></text>
+
+            <circle class="circle_22 circle_fill_maincolor" cx="138" cy="31.5" r="0.7"></circle>
+            <circle class="circle_23 circle_fill_maincolor" cx="146" cy="34.8" r="0.7"></circle>
+            <circle class="circle_24 circle_fill_maincolor" cx="153.6" cy="37.8" r="0.7"></circle>
+            <circle class="circle_25 circle_fill_maincolor" cx="161" cy="40.9" r="0.7"></circle>
+            <circle class="circle_26 circle_fill_maincolor" cx="169" cy="44.1" r="0.7"></circle>
+            <circle class="circle_27 circle_fill_maincolor" cx="177" cy="47.5" r="0.7"></circle>
+            <circle class="circle_28 circle_fill_maincolor" cx="185" cy="50.8" r="0.7"></circle>
+            <text id="circle_22_text" x="138" y="30" class="font_years"></text>
+            <text id="circle_23_text" x="146" y="33" class="font_years"></text>
+            <text id="circle_24_text" x="154" y="36" class="font_years"></text>
+            <text id="circle_25_text" x="160" y="38.5" class="font_years"></text>
+            <text id="circle_26_text" x="169" y="42" class="font_years"></text>
+            <text id="circle_27_text" x="177.5" y="45.5" class="font_years"></text>
+            <text id="circle_28_text" x="184" y="48.5" class="font_years"></text>
+
+
+            <circle class="circle_32 circle_fill_maincolor" cx="204.2" cy="71" r="0.7" />
+            <circle class="circle_33 circle_fill_maincolor" cx="207.1" cy="78" r="0.7" />
+            <circle class="circle_34 circle_fill_maincolor" cx="209.9" cy="85" r="0.7" />
+            <circle class="circle_35 circle_fill_maincolor" cx="212.9" cy="92.5" r="0.7" />
+            <circle class="circle_36 circle_fill_maincolor" cx="216" cy="100" r="0.7" />
+            <circle class="circle_37 circle_fill_maincolor" cx="219.1" cy="107.5" r="0.7" />
+            <circle class="circle_38 circle_fill_maincolor" cx="222.1" cy="115" r="0.7" />
+            <text id="circle_32_text" x="206" y="71" class="font_years"></text>
+            <text id="circle_33_text" x="209" y="77.5" class="font_years"></text>
+            <text id="circle_34_text" x="212" y="85" class="font_years"></text>
+            <text id="circle_35_text" x="215" y="92" class="font_years"></text>
+            <text id="circle_36_text" x="218" y="100" class="font_years"></text>
+            <text id="circle_37_text" x="221" y="107" class="font_years"></text>
+            <text id="circle_38_text" x="224" y="114" class="font_years"></text>
+
+            <circle class="circle_42 circle_fill_maincolor" cx="221.7" cy="140" r="0.7"></circle>
+            <circle class="circle_43 circle_fill_maincolor" cx="218.9" cy="147" r="0.7"></circle>
+            <circle class="circle_44 circle_fill_maincolor" cx="215.7" cy="155" r="0.7"></circle>
+            <circle class="circle_45 circle_fill_maincolor" cx="212.3" cy="163" r="0.7"></circle>
+            <circle class="circle_46 circle_fill_maincolor" cx="209.4" cy="170" r="0.7"></circle>
+            <circle class="circle_47 circle_fill_maincolor" cx="206.3" cy="177.5" r="0.7"></circle>
+            <circle class="circle_48 circle_fill_maincolor" cx="203.2" cy="185" r="0.7"></circle>
+            <text id="circle_42_text" x="224" y="142" class="font_years"></text>
+            <text id="circle_43_text" x="221" y="149" class="font_years"></text>
+            <text id="circle_44_text" x="218" y="156.5" class="font_years"></text>
+            <text id="circle_45_text" x="215" y="164" class="font_years"></text>
+            <text id="circle_46_text" x="212" y="171.5" class="font_years"></text>
+            <text id="circle_47_text" x="209" y="179" class="font_years"></text>
+            <text id="circle_48_text" x="206" y="186" class="font_years"></text>
+
+            <circle class="circle_52 circle_fill_maincolor" cx="185" cy="203.2" r="0.7"></circle>
+            <circle class="circle_53 circle_fill_maincolor" cx="177" cy="206.5" r="0.7"></circle>
+            <circle class="circle_54 circle_fill_maincolor" cx="169" cy="209.8" r="0.7"></circle>
+            <circle class="circle_55 circle_fill_maincolor" cx="161" cy="213.2" r="0.7"></circle>
+            <circle class="circle_56 circle_fill_maincolor" cx="153.6" cy="216.2" r="0.7"></circle>
+            <circle class="circle_57 circle_fill_maincolor" cx="146" cy="219.4" r="0.7"></circle>
+            <circle class="circle_58 circle_fill_maincolor" cx="138" cy="222.8" r="0.7"></circle>
+            <text id="circle_52_text" x="185" y="207.5" class="font_years"></text>
+            <text id="circle_53_text" x="177.5" y="210.5" class="font_years"></text>
+            <text id="circle_54_text" x="169" y="214" class="font_years"></text>
+            <text id="circle_55_text" x="160" y="217.5" class="font_years"></text>
+            <text id="circle_56_text" x="153" y="220" class="font_years"></text>
+            <text id="circle_57_text" x="146" y="223" class="font_years"></text>
+            <text id="circle_58_text" x="138" y="226.3" class="font_years"></text>
+
+            <circle class="circle_62 circle_fill_maincolor" cx="115" cy="222.2" r="0.7"></circle>
+            <circle class="circle_63 circle_fill_maincolor" cx="106.5" cy="218.6" r="0.7"></circle>
+            <circle class="circle_64 circle_fill_maincolor" cx="99" cy="215.5" r="0.7"></circle>
+            <circle class="circle_65 circle_fill_maincolor" cx="92" cy="212.6" r="0.7"></circle>
+            <circle class="circle_66 circle_fill_maincolor" cx="84.5" cy="209.5" r="0.7"></circle>
+            <circle class="circle_67 circle_fill_maincolor" cx="77.5" cy="206.7" r="0.7"></circle>
+            <circle class="circle_68 circle_fill_maincolor" cx="70" cy="203.5" r="0.7"></circle>
+            <text id="circle_62_text" x="114" y="226.5" class="font_years"></text>
+            <text id="circle_63_text" x="105" y="223" class="font_years"></text>
+            <text id="circle_64_text" x="97" y="220" class="font_years"></text>
+            <text id="circle_65_text" x="90.5" y="217" class="font_years"></text>
+            <text id="circle_66_text" x="82.5" y="214" class="font_years"></text>
+            <text id="circle_67_text" x="76" y="211" class="font_years"></text>
+            <text id="circle_68_text" x="68.5" y="208" class="font_years"></text>
+
+            <circle class="circle_72 circle_fill_maincolor" cx="50.6" cy="185" r="0.7" />
+            <circle class="circle_73 circle_fill_maincolor" cx="47.6" cy="177.5" r="0.7" />
+            <circle class="circle_74 circle_fill_maincolor" cx="44.5" cy="170" r="0.7" />
+            <circle class="circle_75 circle_fill_maincolor" cx="41.8" cy="163" r="0.7" />
+            <circle class="circle_76 circle_fill_maincolor" cx="38.6" cy="155" r="0.7" />
+            <circle class="circle_77 circle_fill_maincolor" cx="35.4" cy="147" r="0.7" />
+            <circle class="circle_78 circle_fill_maincolor" cx="32.4" cy="140" r="0.7" />
+            <text id="circle_72_text" x="46.5" y="186" class="font_years"></text>
+            <text id="circle_73_text" x="43" y="179" class="font_years"></text>
+            <text id="circle_74_text" x="39.5" y="171.5" class="font_years"></text>
+            <text id="circle_75_text" x="36.5" y="164" class="font_years"></text>
+            <text id="circle_76_text" x="34.5" y="156.5" class="font_years"></text>
+            <text id="circle_77_text" x="32" y="149" class="font_years"></text>
+            <text id="circle_78_text" x="27.5" y="141.5" class="font_years"></text>
+        </g>
+        <g class="layer5 circle_fill_maincolor" font-family="Manrope" font-size="2.8"><text class="label-0" x="17"
+                y="128">0
+                лет</text><text class="label-10" x="45" y="55">10 лет</text><text class="label-20" x="122" y="25.5">20
+                лет</text><text class="label-30" x="199" y="55">30
+                лет</text><text class="label-40" x="229" y="128">40 лет</text><text class="label-50" x="200" y="199">50
+                лет</text><text class="label-60" x="122" y="231">60 лет</text><text class="label-70" x="44" y="199">70
+                лет</text></g>
+        <g class="layer6 circle_fill_maincolor" font-family="Manrope" font-size="1.8" alignment-baseline="middle"
+            text-anchor="middle">
+            <text x="36.5" y="116" class="fw_bold">1-1,5</text>
+            <text x="40" y="108" class="fw_bold">1,5-2,5</text>
+            <text x="42.5" y="101" class="fw_bold">2,5-4</text>
+            <text x="45.5" y="93.5" class="fw_bold">5 лет</text>
+            <text x="48.5" y="86" class="fw_bold">6-7,5</text>
+            <text x="52.3" y="78.5" class="fw_bold">7,5-8,5</text>
+            <text x="54" y="71.5" class="fw_bold">8,5-9</text>
+
+            <text x="71" y="54.5" class="fw_bold">11-12,5</text>
+            <text x="78.5" y="52" class="fw_bold">12,5-13,5</text>
+            <text x="86" y="48.5" class="fw_bold">13,5-14</text>
+            <text x="93" y="45.5" class="fw_bold">15 лет</text>
+            <text x="100" y="43" class="fw_bold">16-17,5</text>
+            <text x="108" y="40" class="fw_bold">17,5-18,5</text>
+            <text x="113.5" y="37" class="fw_bold">18,5-19</text>
+
+            <text x="139.5" y="36.5" class="fw_bold">21-22,5</text>
+            <text x="145.5" y="39.5" class="fw_bold">22,5-23,5</text>
+            <text x="153" y="42" class="fw_bold">23,5-24</text>
+            <text x="160" y="45" class="fw_bold">25 лет</text>
+            <text x="167" y="48" class="fw_bold">26-27,5</text>
+            <text x="174" y="51" class="fw_bold">27,5-28,5</text>
+            <text x="182" y="54.5" class="fw_bold">28,5-29</text>
+
+            <text x="199" y="73" class="fw_bold">31-32,5</text>
+            <text x="201" y="79.5" class="fw_bold">32,5-33,5</text>
+            <text x="204.5" y="86.5" class="fw_bold">33,5-34</text>
+            <text x="208" y="93.5" class="fw_bold">35 лет</text>
+            <text x="210.5" y="101" class="fw_bold">36-37,5</text>
+            <text x="212.8" y="108.5" class="fw_bold">37,5-38,5</text>
+            <text x="215.8" y="115" class="fw_bold">38,5-39</text>
+
+            <text x="215.8" y="140.5" class="fw_bold">41-42,5</text>
+            <text x="212.8" y="147.5" class="fw_bold">42,5-43,5</text>
+            <text x="210" y="155" class="fw_bold">43,5-44</text>
+            <text x="208" y="162.5" class="fw_bold">45 лет</text>
+            <text x="204.5" y="169" class="fw_bold">46-47,5</text>
+            <text x="201" y="175.5" class="fw_bold">47,5-48,5</text>
+            <text x="199" y="182" class="fw_bold">48,5-49</text>
+
+            <text x="182" y="201" class="fw_bold">51-52,5</text>
+            <text x="176" y="203.3" class="fw_bold">52,5-53,5</text>
+            <text x="169" y="206.5" class="fw_bold">53,5-54</text>
+            <text x="161" y="209.5" class="fw_bold">55 лет</text>
+            <text x="154" y="212" class="fw_bold">56-57,5</text>
+            <text x="147" y="215" class="fw_bold">57,5-58,5</text>
+            <text x="141" y="218.5" class="fw_bold">58,5-59</text>
+
+            <text x="113" y="218.5" class="fw_bold">61-62,5</text>
+            <text x="107" y="215" class="fw_bold">62,5-63,5</text>
+            <text x="100" y="212" class="fw_bold">63,5-64</text>
+            <text x="93" y="209.5" class="fw_bold">65 лет</text>
+            <text x="86.5" y="207" class="fw_bold">66-67,5</text>
+            <text x="80" y="203.6" class="fw_bold">67,5-68,5</text>
+            <text x="73" y="201" class="fw_bold">68,5-69</text>
+
+            <text x="54.5" y="182" class="fw_bold">71-72,5</text>
+            <text x="53.5" y="175.5" class="fw_bold">72,5-73,5</text>
+            <text x="50" y="169" class="fw_bold">73,5-74</text>
+            <text x="47" y="162.5" class="fw_bold">75 лет</text>
+            <text x="44" y="155" class="fw_bold">76-77,5</text>
+            <text x="41.5" y="147.5" class="fw_bold">77,5-78,5</text>
+            <text x="38" y="140.5" class="fw_bold">78,5-79</text>
+        </g>
+    </svg>
+
+
+    <div class="health">
+        <div class="health__table">
+            <div class="health__table__title">
+                КАРТА ЗДОРОВЬЯ
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="health__title">Название чакры</td>
+                        <td class="health__title">Физика</td>
+                        <td class="health__title">Энергия</td>
+                        <td class="health__title">Эмоция</td>
+                    </tr>
+                    <tr class="background_purple">
+                        <td class="health__left td_padding">7. Сахасрара</td>
+                        <td id="physics_7" class="cell_sahasrara"></td>
+                        <td id="energy_7" class="cell_sahasrara"></td>
+                        <td id="emotion_7" class="cell_sahasrara"></td>
+                    </tr>
+
+                    <tr class="background_blue">
+                        <td class="health__left td_padding">6. Аджна</td>
+                        <td id="physics_6" class="cell_sahasrara"></td>
+                        <td id="energy_6" class="cell_sahasrara"></td>
+                        <td id="emotion_6" class="cell_sahasrara"></td>
+                    </tr>
+                    <tr class="background_blue_light">
+                        <td class="health__left td_padding">5. Вишудха</td>
+                        <td id="physics_5" class="cell_sahasrara"></td>
+                        <td id="energy_5" class="cell_sahasrara"></td>
+                        <td id="emotion_5" class="cell_sahasrara"></td>
+                    </tr>
+                    <tr class="background_green">
+                        <td class="health__left td_padding">4. Анахата</td>
+                        <td id="physics_4" class="cell_sahasrara"></td>
+                        <td id="energy_4" class="cell_sahasrara"></td>
+                        <td id="emotion_4" class="cell_sahasrara"></td>
+                    </tr>
+                    <tr class="background_yellow">
+                        <td class="health__left td_padding">3. Манипура</td>
+                        <td id="physics_3" class="cell_sahasrara"></td>
+                        <td id="energy_3" class="cell_sahasrara"></td>
+                        <td id="emotion_3" class="cell_sahasrara"></td>
+                    </tr>
+                    <tr class="background_orange">
+                        <td class="health__left td_padding">2. Свадхистана</td>
+                        <td id="physics_2" class="cell_sahasrara"></td>
+                        <td id="energy_2" class="cell_sahasrara"></td>
+                        <td id="emotion_2" class="cell_sahasrara"></td>
+                    </tr>
+                    <tr class="background_red">
+                        <td class="health__left td_padding">1. Муладхара</td>
+                        <td id="physics_1" class="cell_sahasrara"></td>
+                        <td id="energy_1" class="cell_sahasrara"></td>
+                        <td id="emotion_1" class="cell_sahasrara"></td>
+                    </tr>
+                    <tr class="background_itogo">
+                        <td class="health__left td_padding">Итого</td>
+                        <td id="physics_all" class="cell_sahasrara"></td>
+                        <td id="energy_all" class="cell_sahasrara"></td>
+                        <td id="emotion_all" class="cell_sahasrara"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="destiny grid_container">
+        <div class="destiny__sky  ">
+            <div class="destiny__title">
+                Поиск себя:
+            </div>
+            <div class="destiny__text">
+                Соединение мужского и женского. Выстраивание взаимоотношений. Способности, навыки, умения.
+            </div>
+
+
+            <div class="destiny__table">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Небо:</td>
+                            <td width="1">
+                                <div class="destiny__table__svg">
+                                    <svg width="36" height="36">
+                                        <circle id="circle_sky" cx="18" cy="18" r="17" class="circle_fill_maincolor" />
+                                        <text id="circle_sky_text" x="17.5" y="23" class="destiny__circle"></text>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td width="1" rowspan="2">
+                                <svg id="Layer_1" height="90" enable-background="new 0 0 512 512"
+                                    viewBox="190 55 140 400" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="m195 420.8c0-6.3 5.1-11.4 11.4-11.4h15c9.3 0 15.5-2.9 18.4-8.6s4.4-13.4 4.4-23v-74.4c0-14.7 3.7-25.7 11.2-33s17.1-12.5 28.8-15.4v-.8c-11.7-3.5-21.3-9.1-28.8-17s-11.2-19.3-11.2-34.2v-70.4c0-9.9-1.4-17.3-4.2-22.4s-8.9-7.6-18.2-7.6h-15.4c-6.3 0-11.4-5.1-11.4-11.4 0-6.3 5.1-11.4 11.4-11.4h23c5.3 0 10.6.9 15.8 2.6s9.8 4.3 13.8 7.8 7.3 7.9 9.8 13.4 3.8 11.9 3.8 19.4v76c0 13.1 3.9 23.5 11.8 31.4 5.9 5.9 13.4 9.6 22.6 11.3 5.8 1 10 6.2 10 12.1 0 5.9-4.2 11.1-10.1 12.2-9 1.6-16.4 5.2-22.3 10.8-8 7.6-12 18.2-12 31.8v80.8c0 7.5-1.3 13.9-3.8 19.4s-5.8 9.9-9.8 13.4-8.5 6-13.6 7.6-10.3 2.4-15.6 2.4h-23.4c-6.3 0-11.4-5.1-11.4-11.4z" 
+                                            fill="#7F4B53"/>
+                                    </g>
+                                </svg>
+                            </td>
+                            <td rowspan="2">
+                                <svg width="36" height="36">
+                                    <circle id="circle_se_total" cx="17" cy="18" r="17" class="circle_fill_maincolor" />
+                                    <text id="circle_se_total_text" x="17" y="24" class="destiny__circle"></text>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Земля:</td>
+                            <td>
+                                <svg width="36" height="36">
+                                    <circle id="circle_earth" cx="18" cy="18" r="17" class="circle_fill_maincolor" />
+                                    <text id="circle_earth_text" x="17.5" y="24" class="destiny__circle"></text>
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="destiny__society  ">
+            <div class="destiny__title">
+                Социализация:
+            </div>
+            <div class="destiny__text">
+                Социальная и родовая системы. Результаты и признание в социуме.
+            </div>
+            <div class="destiny__table">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>М:</td>
+                            <td width="1">
+                                <div class="destiny__sky__svg">
+                                    <svg width="36" height="36">
+                                        <circle id="circle_man" cx="18" cy="18" r="17" class="circle_fill_maincolor" />
+                                        <text id="circle_man_text" x="17.5" y="23" class="destiny__circle"></text>
+                                    </svg>
+                                </div>
+                            </td>
+                            <td width="1" rowspan="2">
+                                <svg id="Layer_1" height="90" enable-background="new 0 0 512 512"
+                                    viewBox="190 55 140 400" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="m195 420.8c0-6.3 5.1-11.4 11.4-11.4h15c9.3 0 15.5-2.9 18.4-8.6s4.4-13.4 4.4-23v-74.4c0-14.7 3.7-25.7 11.2-33s17.1-12.5 28.8-15.4v-.8c-11.7-3.5-21.3-9.1-28.8-17s-11.2-19.3-11.2-34.2v-70.4c0-9.9-1.4-17.3-4.2-22.4s-8.9-7.6-18.2-7.6h-15.4c-6.3 0-11.4-5.1-11.4-11.4 0-6.3 5.1-11.4 11.4-11.4h23c5.3 0 10.6.9 15.8 2.6s9.8 4.3 13.8 7.8 7.3 7.9 9.8 13.4 3.8 11.9 3.8 19.4v76c0 13.1 3.9 23.5 11.8 31.4 5.9 5.9 13.4 9.6 22.6 11.3 5.8 1 10 6.2 10 12.1 0 5.9-4.2 11.1-10.1 12.2-9 1.6-16.4 5.2-22.3 10.8-8 7.6-12 18.2-12 31.8v80.8c0 7.5-1.3 13.9-3.8 19.4s-5.8 9.9-9.8 13.4-8.5 6-13.6 7.6-10.3 2.4-15.6 2.4h-23.4c-6.3 0-11.4-5.1-11.4-11.4z" fill="#7F4B53" />
+                                    </g>
+                                </svg>
+                            </td>
+                            <td rowspan="2">
+                                <svg width="36" height="36">
+                                    <circle id="circle_mw_total" cx="17" cy="18" r="17" class="circle_fill_maincolor" />
+                                    <text id="circle_mw_total_text" x="17" y="23" class="destiny__circle"></text>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ж:</td>
+                            <td>
+                                <svg width="36" height="36">
+                                    <circle id="circle_woman" cx="18" cy="18" r="17" class="circle_fill_maincolor" />
+                                    <text id="circle_woman_text" x="17.5" y="23" class="destiny__circle"></text>
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="destiny__spirit  ">
+            <div class="destiny__title title-svg">
+                Духовная гармония
+                <svg width="36" height="36">
+                    <circle id="circle_spirit" cx="18" cy="17" r="17" class="circle_fill_maincolor" />
+                    <text id="circle_spirit_text" x="17.5" y="23" class="destiny__circle"></text>
+                </svg>
+            </div>
+            <div class="destiny__text">
+                Духовный зачет. Кто я для бога? Где божественное во мне?
+            </div>
+        </div>
+        <div class="destiny__planet  ">
+            <div class="destiny__title title-svg">
+                Планетарное
+                <svg width="36" height="36">
+                    <circle id="circle_planet" cx="18" cy="17" r="17" class="circle_fill_maincolor" />
+                    <text id="circle_planet_text" x="17.5" y="23" class="destiny__circle"></text>
+                </svg>
+            </div>
+            <div class="destiny__text">
+                Планетарное предназначение человека
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
