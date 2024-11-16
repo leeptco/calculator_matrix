@@ -1,0 +1,453 @@
+@font-face {
+  font-family: "Manrope";
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+}
+:root {
+  --main-color: #7F4B53;
+  --second-color: #BF949B;
+}
+
+.destiny {
+  max-width: 458px;
+  padding: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+@media (max-width: 1024px) {
+  .destiny {
+    font-size: 10px;
+    padding: 12px;
+    max-width: 372px;
+  }
+}
+@media (min-width: 320px) {
+  .destiny {
+    width: 342px;
+    text-align: center;
+  }
+}
+@media (min-width: 320px) {
+  .destiny__table {
+    display: flex;
+    justify-content: center;
+  }
+}
+.destiny__title {
+  font-weight: 700;
+}
+@media (min-width: 320px) {
+  .destiny__title {
+    display: flex;
+    justify-content: center;
+  }
+}
+.destiny .title-svg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.destiny__circle {
+  fill: white;
+  text-anchor: middle;
+  font-weight: 100;
+}
+@media (max-width: 1024px) {
+  .destiny__circle {
+    font-size: 14px;
+  }
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+@media (max-width: 1024px) {
+  .grid_container {
+    gap: 5px 10px;
+  }
+}
+@media (min-width: 320px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+:root {
+  --main-color: #F35AAB;
+  --second-color: #FFCED3;
+  --color-red: #D94D46;
+  --color-orange: #E4A558;
+  --color-yellow: #FBE945;
+  --color-blue: #3F6DE5;
+  --color-blue_light: #53A7ED;
+  --color-purple: #8A59D4;
+  --color-green: #8FD34F;
+  --pink-liner-1: #F92580;
+  --pink-liner-2: #FF96C3;
+}
+
+.health {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.health__table {
+  font-size: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 25px;
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+}
+@media (min-width: 1024px) {
+  .health__table {
+    font-size: 11px;
+  }
+}
+@media (min-width: 1440px) {
+  .health__table {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .health__table {
+    padding: 15px;
+  }
+}
+.health__table__title {
+  font-size: 15px;
+  color: var(--main-color);
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+@media (min-width: 1024px) {
+  .health__table__title {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .health__table__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1024px) {
+  .health__table__title {
+    margin-bottom: 8px;
+  }
+}
+.health table {
+  border-spacing: 2px;
+}
+.health .td_padding {
+  padding: 5px 30px;
+}
+@media (max-width: 1024px) {
+  .health .td_padding {
+    padding: 5px 15px;
+  }
+}
+.health td {
+  min-width: 90px;
+  border-radius: 6px;
+  color: white;
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .health td {
+    min-width: 73px;
+  }
+}
+@media (max-width: 375px) {
+  .health td {
+    min-width: 68px;
+  }
+}
+.health__title {
+  font-weight: 900;
+  color: var(--main-color) !important;
+  padding-bottom: 8px;
+}
+.health__left {
+  text-align: left;
+  min-width: 110px;
+}
+.health .background_purple {
+  background-color: var(--color-purple);
+}
+.health .background_blue {
+  background-color: var(--color-blue);
+}
+.health .background_blue_light {
+  background-color: var(--color-blue_light);
+}
+.health .background_green {
+  background-color: var(--color-green);
+}
+.health .background_yellow {
+  background-color: var(--color-yellow);
+}
+.health .background_orange {
+  background-color: var(--color-orange);
+}
+.health .background_red {
+  background-color: var(--color-red);
+}
+.health .background_itogo {
+  background-color: var(--main-color);
+}
+
+:root {
+  --main-color: #7F4B53;
+  --second-color: #BF949B;
+  --third-color: #FFF9F9;
+  --color-red: #e54144;
+  --color-orange: #eda26d;
+  --color-yellow: #FBE945;
+  --color-blue: #3F6DE5;
+  --color-blue_light: #53A7ED;
+  --color-purple: #8A59D4;
+  --color-green: #8FD34F;
+  --pink-liner-1: #7F4B53;
+  --pink-liner-2: #BF949B;
+}
+
+* {
+  font-family: "Manrope", Arial, sans-serif;
+}
+
+.font_big,
+.font_small,
+.font_extra_small {
+  text-anchor: middle;
+  fill: white;
+}
+
+.font_big {
+  font-size: 12px;
+}
+
+.font_small {
+  font-size: 6px;
+}
+
+.font_extra_small {
+  font-size: 4.5px;
+}
+
+.font_years {
+  font-size: 2.5px;
+}
+
+.circle_fill_maincolor {
+  fill: var(--main-color);
+}
+
+.circle_stroke_maincolor {
+  fill: none;
+  stroke: var(--main-color);
+}
+
+.circle_purple {
+  fill: var(--color-purple);
+}
+
+.circle_blue {
+  fill: var(--color-blue);
+}
+
+.circle_blue_light {
+  fill: var(--color-blue_light);
+}
+
+.circle_green {
+  fill: var(--color-green);
+}
+
+.circle_orange {
+  fill: var(--color-orange);
+}
+
+.circle_yellow {
+  fill: var(--color-yellow);
+}
+
+.circle_red {
+  fill: var(--color-red);
+}
+
+.birthdate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.birthdate__container {
+  gap: 10px;
+  width: 298px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--pink-liner-1), var(--pink-liner-2) 55%, var(--pink-liner-1));
+  border-radius: 20px;
+  padding: 0 20px;
+}
+@media (min-width: 1024px) {
+  .birthdate__container {
+    width: 400px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__container {
+    width: 520px;
+  }
+}
+.birthdate__form {
+  gap: 5px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .birthdate__form {
+    gap: 5px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__form {
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .birthdate__form {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__form {
+    padding-bottom: 20px;
+  }
+}
+.birthdate__form__title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 10px;
+  color: white;
+}
+@media (min-width: 1024px) {
+  .birthdate__form__title {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__form__title {
+    font-size: 16px;
+  }
+}
+.birthdate__form input {
+  font-size: 10px;
+  width: 85%;
+  border: none;
+  border-bottom: 2px solid white;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .birthdate__form input {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__form input {
+    font-size: 16px;
+  }
+}
+.birthdate__btn {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+.birthdate__btn__inner {
+  font-size: 8px;
+  padding: 5px 0;
+  border-radius: 40px;
+  width: 100%;
+  border: 2px solid var(--third-color);
+  color: var(--main-color);
+  background-color: var(--third-color);
+  transition: all 0.5s ease;
+}
+@media (min-width: 1024px) {
+  .birthdate__btn__inner {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__btn__inner {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .birthdate__btn__inner {
+    padding: 5px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__btn__inner {
+    padding: 5px 0;
+  }
+}
+.birthdate__btn__inner:hover {
+  background-color: var(--main-color);
+  border: 2px solid var(--third-color);
+  color: white;
+}
+.birthdate__age {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+}
+.birthdate__age__title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 10px;
+  margin-top: 8px;
+  border-bottom: 2px solid var(--main-color);
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+@media (min-width: 1024px) {
+  .birthdate__age__title {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__age__title {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .birthdate__age__title {
+    margin-top: 12px;
+  }
+}
+@media (min-width: 1440px) {
+  .birthdate__age__title {
+    margin-top: 12px;
+  }
+}
+
+.fill_stroke_maincolor {
+  fill: var(--main-color);
+  stroke: var(--main-color);
+}
+
+.fw_bold {
+  font-weight: 800;
+}/*# sourceMappingURL=main.css.map */
