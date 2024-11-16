@@ -1,0 +1,88 @@
+@mixin birthdate-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@mixin responsive-font($small, $medium, $large) {
+    font-size: $small;
+  
+    @media (min-width: 1024px) {
+      font-size: $medium;
+    }
+  
+    @media (min-width: 1440px) {
+      font-size: $large;
+    }
+  }
+
+  @mixin responsive-gap($small, $medium, $large) {
+    gap: $small;
+  
+    @media (min-width: 1024px) {
+      gap: $medium;
+    }
+  
+    @media (min-width: 1440px) {
+      gap: $large;
+    }
+  }
+
+  @mixin responsive-width($small, $medium, $large) {
+    width: $small;
+  
+    @media (min-width: 1024px) {
+      width: $medium;
+    }
+  
+    @media (min-width: 1440px) {
+      width: $large;
+    }
+  }
+
+  @mixin responsive-height($small, $medium, $large) {
+    height: $small;
+  
+    @media (min-width: 1024px) {
+      height: $medium;
+    }
+  
+    @media (min-width: 1440px) {
+      height: $large;
+    }
+  }
+
+  @mixin responsive-padding-bottom($small, $medium, $large) {
+    padding-bottom: $small;
+  
+    @media (min-width: 1024px) {
+      padding-bottom: $medium;
+    }
+  
+    @media (min-width: 1440px) {
+      padding-bottom: $large;
+    }
+  }
+
+  @mixin responsive-padding($small, $medium, $large) {
+    padding: $small 0;
+  
+    @media (min-width: 1024px) {
+      padding: $medium 0;
+    }
+  
+    @media (min-width: 1440px) {
+      padding: $large 0;
+    }
+  }
+
+  @mixin responsive-marging-top($small, $medium, $large) {
+    margin-top: $small;
+  
+    @media (min-width: 1024px) {
+      margin-top: $medium;
+    }
+  
+    @media (min-width: 1440px) {
+      margin-top: $large;
+    }
+  }

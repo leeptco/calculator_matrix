@@ -1,0 +1,115 @@
+@import 'mixin';
+
+:root {
+    --main-color: #F35AAB;
+    --second-color: #FFCED3;
+    --color-red: #D94D46;
+    --color-orange: #E4A558;
+    --color-yellow: #FBE945;
+    --color-blue: #3F6DE5;
+    --color-blue_light: #53A7ED;
+    --color-purple: #8A59D4;
+    --color-green: #8FD34F;
+    --pink-liner-1: #F92580;
+    --pink-liner-2: #FF96C3;
+}
+
+.health {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__table {
+        @include responsive-font(8px, 11px, 14px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 25px;
+        border: 2px solid var(--main-color);
+        border-radius: 20px;
+
+        @media (max-width: 1024px) {
+            padding: 15px;
+          }
+
+        &__title {
+            @include responsive-font(15px, 20px, 22px);
+            color: var(--main-color);
+            font-weight: 900;
+            margin-bottom: 14px;
+            @media (max-width: 1024px) {
+                margin-bottom: 8px;
+              }
+        }
+    }
+    table {
+        border-spacing: 2px;
+    }
+
+    .td_padding {
+        padding: 5px 30px;
+
+        @media (max-width: 1024px) {
+            padding: 5px 15px;
+          }
+    }
+
+    td {
+        min-width: 90px;
+        border-radius: 6px;
+        color: white;
+        margin-bottom: 50px;
+
+        @media (max-width: 1024px) {
+            min-width: 73px;
+          }
+          @media (max-width: 375px) {
+             min-width: 68px;
+          }
+    }
+
+    &__title {
+        font-weight: 900;
+        color: var(--main-color) !important;
+        padding-bottom: 8px;
+    }
+
+    &__left {
+        text-align: left;
+        min-width: 110px;
+    }
+
+    .background_purple {
+        background-color: var(--color-purple);
+    }
+
+    .background_blue {
+        background-color: var(--color-blue);
+    }
+
+    .background_blue_light {
+        background-color: var(--color-blue_light);
+    }
+
+    .background_green {
+        background-color: var(--color-green);
+    }
+
+    .background_yellow {
+        background-color: var(--color-yellow);
+    }
+
+    .background_orange {
+        background-color: var(--color-orange);
+    }
+
+    .background_red {
+        background-color: var(--color-red);
+    }
+
+    .background_itogo {
+        background-color: var(--main-color);
+    }
+}

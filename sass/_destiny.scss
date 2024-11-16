@@ -1,0 +1,67 @@
+
+:root {
+    --main-color: #7F4B53;
+    --second-color: #BF949B;
+}
+
+.destiny {
+    max-width: 458px;
+    padding: 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 14px;
+
+    @media (max-width: 1024px) {
+        font-size: 10px;
+        padding: 12px;
+        max-width: 372px;
+    }
+    @media (min-width: 320px) {
+        width: 342px;
+        text-align: center;
+    }
+
+    &__table {
+        @media (min-width: 320px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        @media (min-width: 320px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .title-svg {
+        display: flex;
+        align-items: center;
+        gap: 10px
+    }
+
+    &__circle {
+        fill: white;
+        text-anchor: middle;
+        font-weight: 100;
+        @media (max-width: 1024px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+
+    @media (max-width: 1024px) {
+        gap: 5px 10px;
+    }
+    @media (min-width: 320px) {
+        grid-template-columns: 1fr;
+    }
+}

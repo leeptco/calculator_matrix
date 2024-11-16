@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Manrope';
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+@import 'destiny';
+@import 'table_of_health';
+@import 'mixin';
+
+:root {
+    --main-color: #7F4B53;
+    --second-color: #BF949B;
+    --third-color: #FFF9F9;
+    --color-red: #e54144;
+    --color-orange: #eda26d;
+    --color-yellow: #FBE945;
+    --color-blue: #3F6DE5;
+    --color-blue_light: #53A7ED;
+    --color-purple: #8A59D4;
+    --color-green: #8FD34F;
+    --pink-liner-1: #7F4B53;
+    --pink-liner-2: #BF949B;
+}
+
+* {
+    font-family: 'Manrope', Arial, sans-serif;
+}
+
+.font_big,
+.font_small,
+.font_extra_small {
+    text-anchor: middle;
+    fill: white;
+}
+
+.font_big {
+    font-size: 12px;
+}
+
+.font_small {
+    font-size: 6px;
+}
+
+.font_extra_small {
+    font-size: 4.5px;
+}
+
+.font_years {
+    font-size: 2.5px;
+}
+
+.circle_fill_maincolor {
+    fill: var(--main-color);
+}
+
+.circle_stroke_maincolor {
+    fill: none;
+    stroke: var(--main-color);
+}
+
+.circle_purple {
+    fill: var(--color-purple);
+}
+
+.circle_blue {
+    fill: var(--color-blue);
+}
+
+.circle_blue_light {
+    fill: var(--color-blue_light);
+}
+
+.circle_green {
+    fill: var(--color-green);
+}
+
+.circle_orange {
+    fill: var(--color-orange);
+}
+
+.circle_yellow {
+    fill: var(--color-yellow);
+}
+
+.circle_red {
+    fill: var(--color-red);
+}
+
+.birthdate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        gap: 10px;
+        @include responsive-width(298px, 400px, 520px);
+        display: flex;
+        // flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, var(--pink-liner-1), var(--pink-liner-2) 55%, var(--pink-liner-1));
+        border-radius: 20px;
+        padding: 0 20px;
+    }
+
+    &__form {
+        @include responsive-gap(5px, 5px, 10px);
+        @include responsive-padding-bottom(15px, 20px, 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+
+        &__title {
+            @include birthdate-title;
+            @include responsive-font(10px, 14px, 16px);
+            color: white;
+
+        }
+
+        input {
+            @include responsive-font(10px, 14px, 16px);
+            // @include responsive-width(145px, 256px, 200px);
+            width: 85%;
+            border: none;
+            border-bottom: 2px solid white;
+            text-align: center;
+            color: white;
+            background-color: transparent;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        width: 30%;
+
+        &__inner {
+            @include responsive-font(8px, 12px, 14px);
+            @include responsive-padding(5px, 5px, 5px);
+            border-radius: 40px;
+            width: 100%;
+            border: 2px solid  var(--third-color);
+            color: var(--main-color);
+            background-color: var(--third-color);
+            transition: all 0.5s ease;
+
+
+            &:hover {
+                background-color: var(--main-color);
+                border: 2px solid  var(--third-color);
+                color: white;
+            }
+        }
+
+       
+    }
+
+    &__age {
+        width: 440px;
+        display: flex;
+        justify-content: space-between;
+        &__title {
+            @include birthdate-title;
+            @include responsive-font(10px, 12px, 20px);
+            @include responsive-marging-top(8px, 12px, 12px);
+            border-bottom: 2px solid var(--main-color);
+            color: var(--main-color);
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.fill_stroke_maincolor {
+    fill: var(--main-color);
+    stroke: var(--main-color);
+}
+
+.fw_bold {
+    font-weight: 800;
+}
